@@ -9,7 +9,13 @@ This backend site is to manage the whole blog contents for [ustwo.com-frontend][
 ## Settings for install Wordpress on server
 
 ### Settings on Ubuntu 16.04 Using LAMP Stack
-We installed Wordpress on Ubuntu 16.04 for publish. [see more][3]
+We installed Wordpress v4.7.1 on Ubuntu 16.04 for publish. 
+For the websit we created wp_myblog db in mySql as following.
+mysql> CREATE DATABASE wp_myblog;
+mysql> GRANT ALL PRIVILEGES ON wp_myblog.* TO 'root'@'localhost' IDENTIFIED BY 'your_chosen_password_here';
+mysql> FLUSH PRIVILEGES;
+mysql> EXIT;
+[see more][3]
 
 ### Settings on Mac Using MAMP Stack
 We installed Wordpress on MacOS X Sierra(10.12.2) for development locally. [see more][4]

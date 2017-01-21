@@ -21,18 +21,8 @@
 # use `git rm --cached`
 #
 # Change Log:
-# 20150227 Ignore hello.php plugin. props @damienfa
-# 20150227 Change theme ignore to wildcard twenty*. props @Z33
-# 20140606 Add .editorconfig as a tracked file
-# 20140404 Ignore database, compiled, and packaged files
-# 20140404 Header Information Updated
-# 20140402 Initially Published
 #
 # -----------------------------------------------------------------
-
-# ignore everything in the root except the "wp-content" directory.
-/*
-!wp-content/
 
 # ignore all files starting with .
 .*
@@ -52,6 +42,7 @@
 # ignore OS generated files
 ehthumbs.db
 Thumbs.db
+.DS_Store
 
 # ignore Editor files
 *.sublime-project
@@ -81,20 +72,22 @@ Thumbs.db
 *.tar
 *.zip
 
-# ignore everything in the "wp-content" directory, except:
-# "mu-plugins" directory
-# "plugins" directory
-# "themes" directory
-wp-content/*
-!wp-content/mu-plugins/
-!wp-content/plugins/
-!wp-content/themes/
+wp-config.php
+*.log
 
-# ignore these plugins
+# ignore in the "wp-content" directory
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
 
-# ignore specific themes
-wp-content/themes/twenty*/
-
-# ignore node/grunt dependency directories
-node_modules/
+/.htaccess
+/license.txt
+/readme.html
+/sitemap.xml
+/sitemap.xml.gz
