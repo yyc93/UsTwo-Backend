@@ -227,8 +227,8 @@ function create_initial_rest_routes() {
 	$controller->register_routes();
 
 	// Settings.
-	$controller = new WP_REST_Settings_Controller;
-	$controller->register_routes();
+	// $controller = new WP_REST_Settings_Controller;
+	// $controller->register_routes();
 }
 
 /**
