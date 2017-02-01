@@ -540,11 +540,6 @@ function twentyseventeen_front_page_template( $template ) {
 }
 add_filter( 'frontpage_template',  'twentyseventeen_front_page_template' );
 
-/**
- * Add the Custom Post feature.
- */
-require get_parent_theme_file_path( '/inc/custom-posts.php' );
-
 
 /**
  * Implement the Custom Header feature.
@@ -570,3 +565,15 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+/**
+ * Add the Custom Post feature.
+ */
+require get_parent_theme_file_path( '/inc/custom-posts.php' );
+
+/**
+ * Add the Own REST Api Endpoints.
+ */
+require get_parent_theme_file_path( '/my-rest-api/endpoints/my_rest_posts_controller.php' );
+
+
